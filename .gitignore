@@ -1,0 +1,3 @@
+# ignore cpython
+*.cpython*
+.DS_Store

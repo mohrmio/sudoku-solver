@@ -1,0 +1,9 @@
+table {
+		margin: 0 auto;
+}
+td input {
+		width:25px;
+		height:25px;
+		font-size:20px;
+		text-align:center;
+}

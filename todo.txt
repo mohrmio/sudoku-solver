@@ -1,0 +1,5 @@
+--check case where puzzle is unsolvable / invalid
+--move inputs to jinja template
+--refill template with solution when complete
+--additional error handling
+--improve styling

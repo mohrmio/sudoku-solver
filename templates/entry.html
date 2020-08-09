@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+		<head>
+				<title>Sudoku Solver</title>
+				<link rel='stylesheet' href={{ url_for('static', filename='main.css') }} type='text/css'>
+		</head>
+		<body>
+				<h1>Sudoku Solver</h1>
+				<h5>By Michael Mohr</h5>
+				<p>Enter values and click submit to see the solution!</p>
+			<form id='puzzle' action='/solve' method='post'>
+			<table>
+				<tbody>
+				  <tr>
+						  <td><input type='text' name='11' id='11'></input></td>
+						  <td><input type='text' name='12' id='12'></input></td>
+						  <td><input type='text' name='13' id='13'></input></td>
+						  <td><input type='text' name='14' id='14'></input></td>
+						  <td><input type='text' name='15' id='15'></input></td>
+						  <td><input type='text' name='16' id='16'></input></td>
+						  <td><input type='text' name='17' id='17'></input></td>
+						  <td><input type='text' name='18' id='18'></input></td>
+						  <td><input type='text' name='19' id='19'></input></td>
+				  </tr>
+				  <tr>
+						  <td><input type='text' name='21' id='21'></input></td>
+						  <td><input type='text' name='22' id='22'></input></td>
+						  <td><input type='text' name='23' id='23'></input></td>
+						  <td><input type='text' name='24' id='24'></input></td>
+						  <td><input type='text' name='25' id='25'></input></td>
+						  <td><input type='text' name='26' id='26'></input></td>
+						  <td><input type='text' name='27' id='27'></input></td>
+						  <td><input type='text' name='28' id='28'></input></td>
+						  <td><input type='text' name='29' id='29'></input></td>
+				  </tr>
+				  <tr>
+						  <td><input type='text' name='31' id='31'></input></td>
+						  <td><input type='text' name='32' id='32'></input></td>
+						  <td><input type='text' name='33' id='33'></input></td>
+						  <td><input type='text' name='34' id='34'></input></td>
+						  <td><input type='text' name='35' id='35'></input></td>
+						  <td><input type='text' name='36' id='36'></input></td>
+						  <td><input type='text' name='37' id='37'></input></td>
+						  <td><input type='text' name='38' id='38'></input></td>
+						  <td><input type='text' name='39' id='39'></input></td>
+				  </tr>
+				  <tr>
+						  <td><input type='text' name='41' id='41'></input></td>
+						  <td><input type='text' name='42' id='42'></input></td>
+						  <td><input type='text' name='43' id='43'></input></td>
+						  <td><input type='text' name='44' id='44'></input></td>
+						  <td><input type='text' name='45' id='45'></input></td>
+						  <td><input type='text' name='46' id='46'></input></td>
+						  <td><input type='text' name='47' id='47'></input></td>
+						  <td><input type='text' name='48' id='48'></input></td>
+						  <td><input type='text' name='49' id='49'></input></td>
+				  </tr>
+				  <tr>
+						  <td><input type='text' name='51' id='51'></input></td>
+						  <td><input type='text' name='52' id='52'></input></td>
+						  <td><input type='text' name='53' id='53'></input></td>
+						  <td><input type='text' name='54' id='54'></input></td>
+						  <td><input type='text' name='55' id='55'></input></td>
+						  <td><input type='text' name='56' id='56'></input></td>
+						  <td><input type='text' name='57' id='57'></input></td>
+						  <td><input type='text' name='58' id='58'></input></td>
+						  <td><input type='text' name='59' id='59'></input></td>
+				  </tr>
+				  <tr>
+						  <td><input type='text' name='61' id='61'></input></td>
+						  <td><input type='text' name='62' id='62'></input></td>
+						  <td><input type='text' name='63' id='63'></input></td>
+						  <td><input type='text' name='64' id='64'></input></td>
+						  <td><input type='text' name='65' id='65'></input></td>
+						  <td><input type='text' name='66' id='66'></input></td>
+						  <td><input type='text' name='67' id='67'></input></td>
+						  <td><input type='text' name='68' id='68'></input></td>
+						  <td><input type='text' name='69' id='69'></input></td>
+				  </tr>
+				  <tr>
+						  <td><input type='text' name='71' id='71'></input></td>
+						  <td><input type='text' name='72' id='72'></input></td>
+						  <td><input type='text' name='73' id='73'></input></td>
+						  <td><input type='text' name='74' id='74'></input></td>
+						  <td><input type='text' name='75' id='75'></input></td>
+						  <td><input type='text' name='76' id='76'></input></td>
+						  <td><input type='text' name='77' id='77'></input></td>
+						  <td><input type='text' name='78' id='78'></input></td>
+						  <td><input type='text' name='79' id='79'></input></td>
+				  </tr>
+				  <tr>
+						  <td><input type='text' name='81' id='81'></input></td>
+						  <td><input type='text' name='82' id='82'></input></td>
+						  <td><input type='text' name='83' id='83'></input></td>
+						  <td><input type='text' name='84' id='84'></input></td>
+						  <td><input type='text' name='85' id='85'></input></td>
+						  <td><input type='text' name='86' id='86'></input></td>
+						  <td><input type='text' name='87' id='87'></input></td>
+						  <td><input type='text' name='88' id='88'></input></td>
+						  <td><input type='text' name='89' id='89'></input></td>
+				  </tr>
+				  <tr>
+						  <td><input type='text' name='91' id='91'></input></td>
+						  <td><input type='text' name='92' id='92'></input></td>
+						  <td><input type='text' name='93' id='93'></input></td>
+						  <td><input type='text' name='94' id='94'></input></td>
+						  <td><input type='text' name='95' id='95'></input></td>
+						  <td><input type='text' name='96' id='96'></input></td>
+						  <td><input type='text' name='97' id='97'></input></td>
+						  <td><input type='text' name='98' id='98'></input></td>
+						  <td><input type='text' name='99' id='99'></input></td>
+				  </tr>
+				</tbody>
+			</table>
+			<input type='submit'></input>
+			</form>
+	</body>
+</html>
